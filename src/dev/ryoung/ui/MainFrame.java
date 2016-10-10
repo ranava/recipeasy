@@ -6,6 +6,8 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -59,7 +61,7 @@ public class MainFrame extends JFrame {
 
         printButton.setBackground(new Color(153, 0, 0));
         printButton.setFont(new Font("Tahoma", 0, 18)); 
-        printButton.setText("Print Current Shopping List");
+        printButton.setText("View Current Shopping List");
         printButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 printButtonActionPerformed(evt);
@@ -172,7 +174,15 @@ public class MainFrame extends JFrame {
     }                                        
 
     private void addRecipeButtonActionPerformed(ActionEvent evt) {                                         
-        // TODO add your handling code here:
+    	AddRecipe dialog = new AddRecipe(new JFrame(), true);
+        dialog.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                System.exit(0);
+            }
+        });
+        dialog.setVisible(true);
+        dialog.setAlwaysOnTop (true);
     }                                        
 
     private void resetListButtonActionPerformed(ActionEvent evt) {                                         

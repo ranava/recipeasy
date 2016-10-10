@@ -5,6 +5,8 @@ import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Frame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.logging.Level;
@@ -26,6 +28,8 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.WindowConstants;
 import javax.swing.border.BevelBorder;
+
+import dev.ryoung.classes.Recipe;
 
 /**
  * Initial comments
@@ -157,48 +161,30 @@ public class AddRecipe extends JDialog {
         categoryBox.setModel(new DefaultComboBoxModel<>(new String[] { "Beef", "Chicken", "Pork", "Fish", "Dessert", "Breakfast", "Other" }));
 
         nameText.setFont(font); 
-        nameText.setText("jTextField1");
 
         ingredientsPanel.setBackground(new Color(51, 51, 51));
 
         amountText1.setFont(font); 
-        amountText1.setText("jTextField1");
-
         measurementBox1.setModel(new DefaultComboBoxModel<>(new String[] { "pound", "ounce", "cup", "teaspoon", "tablespoon", "box", "bag", "jar", "unit" }));
-
         ingredientText1.setFont(font); 
-        ingredientText1.setText("jTextField1");
 
         amountText2.setFont(font); 
-        amountText2.setText("jTextField1");
-
         measurementBox2.setModel(new DefaultComboBoxModel<>(new String[] { "pound", "ounce", "cup", "teaspoon", "tablespoon", "box", "bag", "jar", "unit" }));
-
         ingredientText2.setFont(font); 
-        ingredientText2.setText("jTextField1");
 
         amountText3.setFont(font); 
-        amountText3.setText("jTextField1");
-
         measurementBox3.setModel(new DefaultComboBoxModel<>(new String[] { "pound", "ounce", "cup", "teaspoon", "tablespoon", "box", "bag", "jar", "unit" }));
-
         ingredientText3.setFont(font); 
-        ingredientText3.setText("jTextField1");
 
         amountText4.setFont(font); 
-        amountText4.setText("jTextField1");
 
         amountText5.setFont(font); 
-        amountText5.setText("jTextField1");
 
         amountText6.setFont(font); 
-        amountText6.setText("jTextField1");
 
         amountText7.setFont(font); 
-        amountText7.setText("jTextField1");
 
         amountText8.setFont(font); 
-        amountText8.setText("jTextField1");
 
         measurementBox4.setModel(new DefaultComboBoxModel<>(new String[] { "pound", "ounce", "cup", "teaspoon", "tablespoon", "box", "bag", "jar", "unit" }));
 
@@ -211,40 +197,28 @@ public class AddRecipe extends JDialog {
         measurementBox8.setModel(new DefaultComboBoxModel<>(new String[] { "pound", "ounce", "cup", "teaspoon", "tablespoon", "box", "bag", "jar", "unit" }));
 
         ingredientText4.setFont(font); 
-        ingredientText4.setText("jTextField1");
 
         ingredientText5.setFont(font); 
-        ingredientText5.setText("jTextField1");
 
         ingredientText6.setFont(font); 
-        ingredientText6.setText("jTextField1");
 
         ingredientText7.setFont(font); 
-        ingredientText7.setText("jTextField1");
 
         ingredientText8.setFont(font); 
-        ingredientText8.setText("jTextField1");
 
         amountText9.setFont(font); 
-        amountText9.setText("jTextField1");
 
         amountText10.setFont(font); 
-        amountText10.setText("jTextField1");
 
         amountText11.setFont(font); 
-        amountText11.setText("jTextField1");
 
         amountText12.setFont(font); 
-        amountText12.setText("jTextField1");
 
         amountText13.setFont(font); 
-        amountText13.setText("jTextField1");
 
         amountText14.setFont(font); 
-        amountText14.setText("jTextField1");
 
         amountText15.setFont(font); 
-        amountText15.setText("jTextField1");
 
         measurementBox9.setModel(new DefaultComboBoxModel<>(new String[] { "pound", "ounce", "cup", "teaspoon", "tablespoon", "box", "bag", "jar", "unit" }));
 
@@ -464,6 +438,11 @@ public class AddRecipe extends JDialog {
         addButton.setBackground(new Color(153, 0, 0));
         addButton.setFont(new Font("Tahoma", 0, 18)); 
         addButton.setText("Add Recipe");
+        addButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                addButtonActionPerformed(evt);
+            }
+        });
 
         GroupLayout mainPanelLayout = new GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
@@ -528,6 +507,111 @@ public class AddRecipe extends JDialog {
         setLocationRelativeTo(null);
     }// </editor-fold>                        
 
+    private void addButtonActionPerformed(ActionEvent evt) {                                         
+    	//TODO - read all input
+    	String newName = nameText.getText();
+    	String newCat = (String)categoryBox.getSelectedItem();
+    	
+    	String nextIngAmount = amountText1.getText();
+    	String nextIngMeasurement = (String)measurementBox1.getSelectedItem();
+    	String nextIngName = ingredientText1.getText();
+    	
+    	String newIng1 = nextIngAmount + " " + nextIngMeasurement + " " + nextIngName;
+    	
+    	String newIng2 = "";
+    	if (!(ingredientText2.getText().isEmpty())) {
+    		nextIngAmount = amountText2.getText();
+    		nextIngMeasurement = (String)measurementBox2.getSelectedItem();
+        	nextIngName = ingredientText2.getText();
+        	newIng2 = nextIngAmount + " " + nextIngMeasurement + " " + nextIngName;
+    	}
+    	
+    	String newIng3 = "";
+    	if (!(ingredientText3.getText().isEmpty())) {
+    		nextIngAmount = amountText3.getText();
+    		nextIngMeasurement = (String)measurementBox3.getSelectedItem();
+        	nextIngName = ingredientText3.getText();
+        	newIng3 = nextIngAmount + " " + nextIngMeasurement + " " + nextIngName;
+    	}
+    	
+    	String newIng4 = "";
+    	if (!(ingredientText4.getText().isEmpty())) {
+    		nextIngAmount = amountText4.getText();
+    		nextIngMeasurement = (String)measurementBox4.getSelectedItem();
+        	nextIngName = ingredientText4.getText();
+        	newIng4 = nextIngAmount + " " + nextIngMeasurement + " " + nextIngName;
+    	}
+    	
+    	String newIng5 = "";
+    	if (!(ingredientText5.getText().isEmpty())) {
+    		nextIngAmount = amountText5.getText();
+    		nextIngMeasurement = (String)measurementBox5.getSelectedItem();
+        	nextIngName = ingredientText5.getText();
+        	newIng5 = nextIngAmount + " " + nextIngMeasurement + " " + nextIngName;
+    	}
+    	
+    	String newIng6 = "";
+    	if (!(ingredientText6.getText().isEmpty())) {
+    		nextIngAmount = amountText6.getText();
+    		nextIngMeasurement = (String)measurementBox6.getSelectedItem();
+        	nextIngName = ingredientText6.getText();
+        	newIng6 = nextIngAmount + " " + nextIngMeasurement + " " + nextIngName;
+    	}
+    	
+    	String newIng7 = "";
+    	if (!(ingredientText7.getText().isEmpty())) {
+    		nextIngAmount = amountText7.getText();
+    		nextIngMeasurement = (String)measurementBox7.getSelectedItem();
+        	nextIngName = ingredientText7.getText();
+        	newIng7 = nextIngAmount + " " + nextIngMeasurement + " " + nextIngName;
+    	}
+    	
+    	String newIng8 = "";
+    	if (!(ingredientText8.getText().isEmpty())) {
+    		nextIngAmount = amountText8.getText();
+    		nextIngMeasurement = (String)measurementBox8.getSelectedItem();
+        	nextIngName = ingredientText8.getText();
+        	newIng8 = nextIngAmount + " " + nextIngMeasurement + " " + nextIngName;
+    	}
+    	
+    	String newIng9 = "";
+    	if (!(ingredientText9.getText().isEmpty())) {
+    		nextIngAmount = amountText9.getText();
+    		nextIngMeasurement = (String)measurementBox9.getSelectedItem();
+        	nextIngName = ingredientText9.getText();
+        	newIng9 = nextIngAmount + " " + nextIngMeasurement + " " + nextIngName;
+    	}
+    	
+    	String newIng10 = "";
+    	if (!(ingredientText10.getText().isEmpty())) {
+    		nextIngAmount = amountText10.getText();
+    		nextIngMeasurement = (String)measurementBox10.getSelectedItem();
+        	nextIngName = ingredientText10.getText();
+        	newIng10 = nextIngAmount + " " + nextIngMeasurement + " " + nextIngName;
+    	}
+    	
+    	String newIng11 = "";
+    	if (!(ingredientText11.getText().isEmpty())) {
+    		nextIngAmount = amountText11.getText();
+    		nextIngMeasurement = (String)measurementBox11.getSelectedItem();
+        	nextIngName = ingredientText11.getText();
+        	newIng11 = nextIngAmount + " " + nextIngMeasurement + " " + nextIngName;
+    	}
+    	
+    	String newIng12 = "";
+    	if (!(ingredientText12.getText().isEmpty())) {
+    		nextIngAmount = amountText12.getText();
+    		nextIngMeasurement = (String)measurementBox12.getSelectedItem();
+        	nextIngName = ingredientText12.getText();
+        	newIng12 = nextIngAmount + " " + nextIngMeasurement + " " + nextIngName;
+    	}
+    	
+    	Recipe recipe = new Recipe(newName, newCat, newIng1, newIng2, newIng3, newIng4, newIng5, newIng6,
+    			newIng7, newIng8, newIng9, newIng10, newIng11, newIng12);
+    	recipe.addRecipe(recipe);
+    	dispose();
+    }
+    
     /**
      * @param args the command line arguments
      */
