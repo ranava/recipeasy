@@ -7,6 +7,8 @@ import java.awt.Font;
 import java.awt.Frame;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -22,6 +24,8 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.WindowConstants;
 import javax.swing.border.BevelBorder;
+
+import dev.ryoung.classes.Recipe;
 
 /**
  * Initial comments
@@ -91,6 +95,8 @@ public class RecipesAtoZ extends JDialog {
         jLabel1.setForeground(new Color(255, 255, 255));
         jLabel1.setText("Recipes");
 
+        nextPageButton.setVisible(false);
+        
         GroupLayout headerPanelLayout = new GroupLayout(headerPanel);
         headerPanel.setLayout(headerPanelLayout);
         headerPanelLayout.setHorizontalGroup(
@@ -108,115 +114,172 @@ public class RecipesAtoZ extends JDialog {
                 .addContainerGap(44, Short.MAX_VALUE))
         );
 
-        Font font = new Font("Tahoma", 0, 14);
+        Font font = new Font("Tahoma", 0, 16);
 
+        Recipe recipe = new Recipe();
+        List<Recipe> newList = new ArrayList<Recipe>();
+        newList = recipe.recipeList("X");
+        
         recipe1.setFont(font); 
         recipe1.setForeground(new Color(255, 255, 255));
-        recipe1.setText("You have111111 no recipes!");
+        recipe1.setText(newList.get(0).getName());
 
-        recipe2.setFont(font); 
-        recipe2.setForeground(new Color(255, 255, 255));
-        recipe2.setText("You have 222222no recipes!");
+        if(1 < newList.size()){
+        	recipe2.setFont(font); 
+        	recipe2.setForeground(new Color(255, 255, 255));
+        	recipe2.setText(newList.get(1).getName());
+        }
 
-        recipe3.setFont(font); 
-        recipe3.setForeground(new Color(255, 255, 255));
-        recipe3.setText("You have n3333o recipes!");
+        if(2 < newList.size()){
+        	recipe3.setFont(font); 
+        	recipe3.setForeground(new Color(255, 255, 255));
+        	recipe3.setText(newList.get(2).getName());
+        }
 
-        recipe4.setFont(font); 
-        recipe4.setForeground(new Color(255, 255, 255));
-        recipe4.setText("You have 4444no recipes!");
+        if(3 < newList.size()){
+        	recipe4.setFont(font); 
+        	recipe4.setForeground(new Color(255, 255, 255));
+        	recipe4.setText(newList.get(3).getName());
+        }
 
-        recipe5.setFont(font); 
-        recipe5.setForeground(new Color(255, 255, 255));
-        recipe5.setText("You have n5555o recipes!");
+        if(4 < newList.size()){
+        	recipe5.setFont(font); 
+        	recipe5.setForeground(new Color(255, 255, 255));
+        	recipe5.setText(newList.get(4).getName());
+        }
 
-        recipe6.setFont(font); 
-        recipe6.setForeground(new Color(255, 255, 255));
-        recipe6.setText("You have no 666recipes!");
+        if(5 < newList.size()){
+        	recipe6.setFont(font); 
+        	recipe6.setForeground(new Color(255, 255, 255));
+        	recipe6.setText(newList.get(5).getName());
+        }
 
-        recipe7.setFont(font); 
-        recipe7.setForeground(new Color(255, 255, 255));
-        recipe7.setText("You have no re777cipes!");
+        if(6 < newList.size()){
+        	recipe7.setFont(font); 
+        	recipe7.setForeground(new Color(255, 255, 255));
+        	recipe7.setText(newList.get(6).getName());
+        }
 
-        recipe8.setFont(font); 
-        recipe8.setForeground(new Color(255, 255, 255));
-        recipe8.setText("You have no recip888es!");
+        if(7 < newList.size()){
+        	recipe8.setFont(font); 
+        	recipe8.setForeground(new Color(255, 255, 255));
+        	recipe8.setText(newList.get(7).getName());
+        }
 
-        recipe9.setFont(font); 
-        recipe9.setForeground(new Color(255, 255, 255));
-        recipe9.setText("You have no re999cipes!");
+        if(8 < newList.size()){
+        	recipe9.setFont(font); 
+        	recipe9.setForeground(new Color(255, 255, 255));
+        	recipe9.setText(newList.get(8).getName());
+        }
 
-        recipe10.setFont(font); 
-        recipe10.setForeground(new Color(255, 255, 255));
-        recipe10.setText("You have no rec10101ipes!");
+        if(9 < newList.size()){
+        	recipe10.setFont(font); 
+        	recipe10.setForeground(new Color(255, 255, 255));
+        	recipe10.setText(newList.get(9).getName());
+        }
 
-        recipe11.setFont(font); 
-        recipe11.setForeground(new Color(255, 255, 255));
-        recipe11.setText("You have no rec11111ipes!");
+        if(10 < newList.size()){
+        	recipe11.setFont(font); 
+        	recipe11.setForeground(new Color(255, 255, 255));
+        	recipe11.setText(newList.get(10).getName());
+        }
 
-        recipe12.setFont(font); 
-        recipe12.setForeground(new Color(255, 255, 255));
-        recipe12.setText("You have no re121212cipes!");
+        if(11 < newList.size()){
+        	recipe12.setFont(font); 
+        	recipe12.setForeground(new Color(255, 255, 255));
+        	recipe12.setText(newList.get(11).getName());
+        }
         
-        recipe13.setFont(font); 
-        recipe13.setForeground(new Color(255, 255, 255));
-        recipe13.setText("You have no 262626recipes!");
+        if(12 < newList.size()){
+        	recipe13.setFont(font); 
+        	recipe13.setForeground(new Color(255, 255, 255));
+        	recipe13.setText(newList.get(12).getName());
+        }
 
-        recipe14.setFont(font); 
-        recipe14.setForeground(new Color(255, 255, 255));
-        recipe14.setText("You have no 1414141recipes!");
+        if(13 < newList.size()){
+        	recipe14.setFont(font); 
+        	recipe14.setForeground(new Color(255, 255, 255));
+        	recipe14.setText(newList.get(13).getName());
+        }
 
-        recipe15.setFont(font); 
-        recipe15.setForeground(new Color(255, 255, 255));
-        recipe15.setText("You have no151515 recipes!");
+        if(14 < newList.size()){
+        	recipe15.setFont(font); 
+        	recipe15.setForeground(new Color(255, 255, 255));
+        	recipe15.setText(newList.get(14).getName());
+        }
         
-        recipe16.setFont(font); 
-        recipe16.setForeground(new Color(255, 255, 255));
-        recipe16.setText("You have no161616 recipes!");
+        if(15 < newList.size()){
+        	recipe16.setFont(font); 
+        	recipe16.setForeground(new Color(255, 255, 255));
+        	recipe16.setText(newList.get(15).getName());
+        }
 
-        recipe17.setFont(font); 
-        recipe17.setForeground(new Color(255, 255, 255));
-        recipe17.setText("You have no 171717recipes!");
+        if(16 < newList.size()){
+        	recipe17.setFont(font); 
+        	recipe17.setForeground(new Color(255, 255, 255));
+        	recipe17.setText(newList.get(16).getName());
+        }
 
-        recipe18.setFont(font); 
-        recipe18.setForeground(new Color(255, 255, 255));
-        recipe18.setText("You have no 181818recipes!");
+        if(17 < newList.size()){
+        	recipe18.setFont(font); 
+        	recipe18.setForeground(new Color(255, 255, 255));
+        	recipe18.setText(newList.get(17).getName());
+        }
 
-        recipe19.setFont(font); 
-        recipe19.setForeground(new Color(255, 255, 255));
-        recipe19.setText("You have no 1919190recipes!");
+        if(18 < newList.size()){
+        	recipe19.setFont(font); 
+        	recipe19.setForeground(new Color(255, 255, 255));
+        	recipe19.setText(newList.get(18).getName());
+        }
 
-        recipe20.setFont(font); 
-        recipe20.setForeground(new Color(255, 255, 255));
-        recipe20.setText("You have n202020o recipes!");
+        if(19 < newList.size()){
+        	recipe20.setFont(font); 
+        	recipe20.setForeground(new Color(255, 255, 255));
+        	recipe20.setText(newList.get(19).getName());
+        }
 
-        recipe21.setFont(font); 
-        recipe21.setForeground(new Color(255, 255, 255));
-        recipe21.setText("You have no212121 recipes!");
+        if(20 < newList.size()){
+        	recipe21.setFont(font); 
+        	recipe21.setForeground(new Color(255, 255, 255));
+        	recipe21.setText(newList.get(20).getName());
+        }
 
-        recipe22.setFont(font); 
-        recipe22.setForeground(new Color(255, 255, 255));
-        recipe22.setText("You have no22222 recipes!");
+        if(21 < newList.size()){
+        	recipe22.setFont(font); 
+        	recipe22.setForeground(new Color(255, 255, 255));
+        	recipe22.setText(newList.get(21).getName());
+        }
 
-        recipe23.setFont(font); 
-        recipe23.setForeground(new Color(255, 255, 255));
-        recipe23.setText("You have 232323no recipes!");
+        if(22 < newList.size()){
+        	recipe23.setFont(font); 
+        	recipe23.setForeground(new Color(255, 255, 255));
+        	recipe23.setText(newList.get(22).getName());
+        }
 
-        recipe24.setFont(font); 
-        recipe24.setForeground(new Color(255, 255, 255));
-        recipe24.setText("You have242424 no recipes!");
+        if(23 < newList.size()){
+        	recipe24.setFont(font); 
+        	recipe24.setForeground(new Color(255, 255, 255));
+        	recipe24.setText(newList.get(23).getName());
+        }
 
-        recipe25.setFont(font); 
-        recipe25.setForeground(new Color(255, 255, 255));
-        recipe25.setText("You have 2525no recipes!");
+        if(24 < newList.size()){
+        	recipe25.setFont(font); 
+        	recipe25.setForeground(new Color(255, 255, 255));
+        	recipe25.setText(newList.get(24).getName());
+        }
 
-        recipe26.setFont(font); 
-        recipe26.setForeground(new Color(255, 255, 255));
-        recipe26.setText("You have n272727o recipes!");
+        if(25 < newList.size()){
+        	recipe26.setFont(font); 
+        	recipe26.setForeground(new Color(255, 255, 255));
+        	recipe26.setText(newList.get(25).getName());
+        }
         
-        nextPageButton.setBackground(new Color(153, 0, 0));
-        nextPageButton.setFont(new Font("Tahoma", 0, 18)); 
-        nextPageButton.setText("Page 2");
+        if(newList.size() > 26){
+        	nextPageButton.setVisible(true);
+        	nextPageButton.setBackground(new Color(153, 0, 0));
+        	nextPageButton.setFont(new Font("Tahoma", 0, 18)); 
+        	nextPageButton.setText("Page 2");
+        }
 
         GroupLayout mainPanelLayout = new GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);

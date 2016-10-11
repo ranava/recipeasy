@@ -60,10 +60,10 @@ public class AddRecipe extends JDialog {
         headerPanel = new JPanel();
         headerText = new JLabel();
         recipeName = new JLabel();
-        recipeCategory = new JLabel();
-        ingredients = new JLabel();
-        categoryBox = new JComboBox<>();
         nameText = new JTextField();
+        recipeCategory = new JLabel();
+        categoryBox = new JComboBox<>();
+        ingredients = new JLabel();
         ingredientsPanel = new JPanel();
         amountText1 = new JTextField();
         measurementBox1 = new JComboBox<>();
@@ -75,40 +75,40 @@ public class AddRecipe extends JDialog {
         measurementBox3 = new JComboBox<>();
         ingredientText3 = new JTextField();
         amountText4 = new JTextField();
-        amountText5 = new JTextField();
-        amountText6 = new JTextField();
-        amountText7 = new JTextField();
-        amountText8 = new JTextField();
         measurementBox4 = new JComboBox<>();
-        measurementBox5 = new JComboBox<>();
-        measurementBox6 = new JComboBox<>();
-        measurementBox7 = new JComboBox<>();
-        measurementBox8 = new JComboBox<>();
         ingredientText4 = new JTextField();
+        amountText5 = new JTextField();
+        measurementBox5 = new JComboBox<>();
         ingredientText5 = new JTextField();
+        amountText6 = new JTextField();
+        measurementBox6 = new JComboBox<>();
         ingredientText6 = new JTextField();
+        amountText7 = new JTextField();
+        measurementBox7 = new JComboBox<>();
         ingredientText7 = new JTextField();
+        amountText8 = new JTextField();
+        measurementBox8 = new JComboBox<>();
         ingredientText8 = new JTextField();
         amountText9 = new JTextField();
-        amountText10 = new JTextField();
-        amountText11 = new JTextField();
-        amountText12 = new JTextField();
-        amountText13 = new JTextField();
-        amountText14 = new JTextField();
-        amountText15 = new JTextField();
         measurementBox9 = new JComboBox<>();
-        measurementBox10 = new JComboBox<>();
-        measurementBox11 = new JComboBox<>();
-        measurementBox12 = new JComboBox<>();
-        measurementBox13 = new JComboBox<>();
-        measurementBox14 = new JComboBox<>();
-        measurementBox15 = new JComboBox<>();
         ingredientText9 = new JTextField();
+        amountText10 = new JTextField();
+        measurementBox10 = new JComboBox<>();
         ingredientText10 = new JTextField();
+        amountText11 = new JTextField();
+        measurementBox11 = new JComboBox<>();
         ingredientText11 = new JTextField();
+        amountText12 = new JTextField();
+        measurementBox12 = new JComboBox<>();
         ingredientText12 = new JTextField();
+        amountText13 = new JTextField();
+        measurementBox13 = new JComboBox<>();
         ingredientText13 = new JTextField();
+        amountText14 = new JTextField();
+        measurementBox14 = new JComboBox<>();
         ingredientText14 = new JTextField();
+        amountText15 = new JTextField();
+        measurementBox15 = new JComboBox<>();
         ingredientText15 = new JTextField();
         addButton = new JButton();
 
@@ -177,83 +177,53 @@ public class AddRecipe extends JDialog {
         ingredientText3.setFont(font); 
 
         amountText4.setFont(font); 
-
-        amountText5.setFont(font); 
-
-        amountText6.setFont(font); 
-
-        amountText7.setFont(font); 
-
-        amountText8.setFont(font); 
-
         measurementBox4.setModel(new DefaultComboBoxModel<>(new String[] { "pound", "ounce", "cup", "teaspoon", "tablespoon", "box", "bag", "jar", "unit" }));
-
-        measurementBox5.setModel(new DefaultComboBoxModel<>(new String[] { "pound", "ounce", "cup", "teaspoon", "tablespoon", "box", "bag", "jar", "unit" }));
-
-        measurementBox6.setModel(new DefaultComboBoxModel<>(new String[] { "pound", "ounce", "cup", "teaspoon", "tablespoon", "box", "bag", "jar", "unit" }));
-
-        measurementBox7.setModel(new DefaultComboBoxModel<>(new String[] { "pound", "ounce", "cup", "teaspoon", "tablespoon", "box", "bag", "jar", "unit" }));
-
-        measurementBox8.setModel(new DefaultComboBoxModel<>(new String[] { "pound", "ounce", "cup", "teaspoon", "tablespoon", "box", "bag", "jar", "unit" }));
-
         ingredientText4.setFont(font); 
-
+        
+        amountText5.setFont(font); 
+        measurementBox5.setModel(new DefaultComboBoxModel<>(new String[] { "pound", "ounce", "cup", "teaspoon", "tablespoon", "box", "bag", "jar", "unit" }));
         ingredientText5.setFont(font); 
-
+        
+        amountText6.setFont(font); 
+        measurementBox6.setModel(new DefaultComboBoxModel<>(new String[] { "pound", "ounce", "cup", "teaspoon", "tablespoon", "box", "bag", "jar", "unit" }));
         ingredientText6.setFont(font); 
-
+        
+        amountText7.setFont(font); 
+        measurementBox7.setModel(new DefaultComboBoxModel<>(new String[] { "pound", "ounce", "cup", "teaspoon", "tablespoon", "box", "bag", "jar", "unit" }));
         ingredientText7.setFont(font); 
-
+        
+        amountText8.setFont(font); 
+        measurementBox8.setModel(new DefaultComboBoxModel<>(new String[] { "pound", "ounce", "cup", "teaspoon", "tablespoon", "box", "bag", "jar", "unit" }));
         ingredientText8.setFont(font); 
 
         amountText9.setFont(font); 
-
-        amountText10.setFont(font); 
-
-        amountText11.setFont(font); 
-
-        amountText12.setFont(font); 
-
-        amountText13.setFont(font); 
-
-        amountText14.setFont(font); 
-
-        amountText15.setFont(font); 
-
         measurementBox9.setModel(new DefaultComboBoxModel<>(new String[] { "pound", "ounce", "cup", "teaspoon", "tablespoon", "box", "bag", "jar", "unit" }));
-
+        ingredientText9.setFont(font);
+        
+        amountText10.setFont(font); 
         measurementBox10.setModel(new DefaultComboBoxModel<>(new String[] { "pound", "ounce", "cup", "teaspoon", "tablespoon", "box", "bag", "jar", "unit" }));
-
+        ingredientText10.setFont(font);
+        
+        amountText11.setFont(font); 
         measurementBox11.setModel(new DefaultComboBoxModel<>(new String[] { "pound", "ounce", "cup", "teaspoon", "tablespoon", "box", "bag", "jar", "unit" }));
-
+        ingredientText11.setFont(font);
+        
+        amountText12.setFont(font); 
         measurementBox12.setModel(new DefaultComboBoxModel<>(new String[] { "pound", "ounce", "cup", "teaspoon", "tablespoon", "box", "bag", "jar", "unit" }));
-
+        ingredientText12.setFont(font);
+        
+        amountText13.setFont(font); 
         measurementBox13.setModel(new DefaultComboBoxModel<>(new String[] { "pound", "ounce", "cup", "teaspoon", "tablespoon", "box", "bag", "jar", "unit" }));
-
+        ingredientText13.setFont(font);
+        
+        amountText14.setFont(font); 
         measurementBox14.setModel(new DefaultComboBoxModel<>(new String[] { "pound", "ounce", "cup", "teaspoon", "tablespoon", "box", "bag", "jar", "unit" }));
-
+        ingredientText14.setFont(font);
+        
+        amountText15.setFont(font); 
         measurementBox15.setModel(new DefaultComboBoxModel<>(new String[] { "pound", "ounce", "cup", "teaspoon", "tablespoon", "box", "bag", "jar", "unit" }));
-
-        ingredientText9.setFont(font); 
-        ingredientText9.setText("jTextField1");
-
-        ingredientText10.setFont(font); 
-        ingredientText10.setText("jTextField1");
-
-        ingredientText11.setFont(font); 
-        ingredientText11.setText("jTextField1");
-
-        ingredientText12.setFont(font); 
-        ingredientText12.setText("jTextField1");
-
-        ingredientText13.setFont(font); 
-        ingredientText13.setText("jTextField1");
-
-        ingredientText14.setFont(font); 
-        ingredientText14.setText("jTextField1");
-
-        ingredientText15.setFont(font); 
-        ingredientText15.setText("jTextField1");
+        ingredientText15.setFont(font);
+       
 
         GroupLayout ingredientsPanelLayout = new GroupLayout(ingredientsPanel);
         ingredientsPanel.setLayout(ingredientsPanelLayout);
@@ -508,9 +478,33 @@ public class AddRecipe extends JDialog {
     }// </editor-fold>                        
 
     private void addButtonActionPerformed(ActionEvent evt) {                                         
-    	//TODO - read all input
     	String newName = nameText.getText();
-    	String newCat = (String)categoryBox.getSelectedItem();
+    	String selectedCat = (String)categoryBox.getSelectedItem();
+    	String newCat = "";
+    	
+    	switch(selectedCat) {
+    		case "Beef":
+    			newCat = "B";
+    			break;
+    		case "Chicken":
+    			newCat = "C";
+    			break;
+    		case "Pork":
+    			newCat = "P";
+    			break;
+    		case "Fish":
+    			newCat = "F";
+    			break;
+    		case "Dessert":
+    			newCat = "D";
+    			break;
+    		case "Breakfast":
+    			newCat = "A";
+    			break;
+    		case "Other":
+    			newCat = "O";
+    			break;
+    	}
     	
     	String nextIngAmount = amountText1.getText();
     	String nextIngMeasurement = (String)measurementBox1.getSelectedItem();
@@ -652,14 +646,31 @@ public class AddRecipe extends JDialog {
 
     // Variables declaration - do not modify                     
     private JButton addButton;
+    private JLabel recipeName;
+    private JTextField nameText;
+    private JLabel recipeCategory;
     private JComboBox<String> categoryBox;
-    private JComboBox<String> measurementBox9;
-    private JComboBox<String> measurementBox10;
-    private JComboBox<String> measurementBox11;
-    private JComboBox<String> measurementBox12;
-    private JComboBox<String> measurementBox13;
-    private JComboBox<String> measurementBox14;
-    private JComboBox<String> measurementBox15;
+    private JLabel ingredients;
+    private JLabel headerText;
+    private JPanel mainPanel;
+    private JPanel headerPanel;
+    private JPanel ingredientsPanel;
+    private JScrollPane scrollPane;
+    private JTextField amountText1;
+    private JTextField amountText2;
+    private JTextField amountText3;
+    private JTextField amountText4;
+    private JTextField amountText5;
+    private JTextField amountText6;
+    private JTextField amountText7;
+    private JTextField amountText8;
+    private JTextField amountText9;
+    private JTextField amountText10;
+    private JTextField amountText11;
+    private JTextField amountText12;
+    private JTextField amountText13;
+    private JTextField amountText14;
+    private JTextField amountText15;
     private JComboBox<String> measurementBox1;
     private JComboBox<String> measurementBox2;
     private JComboBox<String> measurementBox3;
@@ -668,32 +679,21 @@ public class AddRecipe extends JDialog {
     private JComboBox<String> measurementBox6;
     private JComboBox<String> measurementBox7;
     private JComboBox<String> measurementBox8;
-    private JLabel recipeName;
-    private JLabel recipeCategory;
-    private JLabel ingredients;
-    private JLabel headerText;
-    private JPanel mainPanel;
-    private JPanel headerPanel;
-    private JPanel ingredientsPanel;
-    private JScrollPane scrollPane;
-    private JTextField amountText5;
-    private JTextField amountText6;
-    private JTextField amountText7;
-    private JTextField amountText8;
+    private JComboBox<String> measurementBox9;
+    private JComboBox<String> measurementBox10;
+    private JComboBox<String> measurementBox11;
+    private JComboBox<String> measurementBox12;
+    private JComboBox<String> measurementBox13;
+    private JComboBox<String> measurementBox14;
+    private JComboBox<String> measurementBox15;
+    private JTextField ingredientText1;
+    private JTextField ingredientText2;
+    private JTextField ingredientText3;
     private JTextField ingredientText4;
-    private JTextField nameText;
     private JTextField ingredientText5;
     private JTextField ingredientText6;
     private JTextField ingredientText7;
     private JTextField ingredientText8;
-    private JTextField amountText9;
-    private JTextField amountText10;
-    private JTextField amountText11;
-    private JTextField amountText12;
-    private JTextField amountText13;
-    private JTextField amountText14;
-    private JTextField amountText15;
-    private JTextField amountText1;
     private JTextField ingredientText9;
     private JTextField ingredientText10;
     private JTextField ingredientText11;
@@ -701,11 +701,5 @@ public class AddRecipe extends JDialog {
     private JTextField ingredientText13;
     private JTextField ingredientText14;
     private JTextField ingredientText15;
-    private JTextField ingredientText1;
-    private JTextField amountText2;
-    private JTextField ingredientText2;
-    private JTextField amountText3;
-    private JTextField ingredientText3;
-    private JTextField amountText4;
     // End of variables declaration                   
 }
